@@ -1,0 +1,11 @@
+<div class="error" *ngIf="showError" [innerHTML]="errorMsg"></div>
+
+
+<input class="editInput" [(value)]="inputValue" />
+<button (ngClick)="saveValue()">Accept</button>
+
+<ol>
+  <li *ngFor="let item of toDoList">
+    {{item}}  <i class="edit" (click)="edit($event)"></i> <i class="remove" (click)="remove($event)"></i>
+  </li>
+</ol>
